@@ -1,9 +1,10 @@
 from constants import videoWriter, img, divace_texture, printfile
-
+#write cframe to wideo
 def video_write(x,y):
     im = drow(img.copy(),getdots(x,y))
     videoWriter.write(im)
 
+#drow dots in imege where dot is look like [x,y,color] wheke color is [blue,green,red]
 def drow(image,dots):
     for dot in dots:
         if dot[0] >= 0 and dot[1] >= 0 and dot[0] < 1280 and dot[1] < 400:
@@ -25,6 +26,7 @@ def getdots(x,y):
     
     return dots
 
+#write message to file
 def outputf(message):
     my_file = open(printfile, 'r')
     r = my_file.read()
@@ -33,7 +35,6 @@ def outputf(message):
     my_file.write(message)
     
     my_file.close()
-
 
 
 def video_reliase():

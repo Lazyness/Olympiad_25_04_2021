@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import cv2
 
 
-filename = "data-1-2.csv"
+filename = "data-2-6.csv"
 
 
 map_name = "photo_2021-04-24_10-17-12.jpg"
@@ -11,8 +10,8 @@ imgWidth = 1280
 imgHeight = 400
 video_speed = 10
 
-videoname = "output.avi"
-printfile = "raport.txt"
+videoname = "output2-6.avi"
+printfile = "raport2-6.txt"
 
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')
 videoWriter = cv2.VideoWriter(videoname, fourcc, video_speed , (imgWidth, imgHeight))
@@ -117,44 +116,3 @@ class Date():
         return [-1000,-1000]
 
 datelast = Date()
-=======
-import cv2
-
-
-filename = "D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\data-1-2.csv"
-message = 'Hello world!!!!!!!!!!'
-
-map_name = "D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\photo_2021-04-24_10-17-12.jpg"
-img = cv2.imread(map_name)
-imgWidth = 1280
-imgHeight = 400
-video_speed = 2
-
-
-
-fourcc = cv2.VideoWriter_fourcc(*'DIVX')
-videoWriter = cv2.VideoWriter("D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\output.avi", fourcc, video_speed , (imgWidth, imgHeight))
-
-cordB1 = [1091,271]
-cordB2 = [1091,121]
-cordB3 = [176,121]
-cordB4 = [176,263]
-cordB5 = [743,130]
-cordB6 = [568,220]
-cv2.imshow("sad",img)
-cv2.waitKey(1)
-
-r = [0,0,255]
-n = None
-divace_texture = [
-    [n,n,r,r,r,r,r,n,n],
-    [n,r,r,r,r,r,r,r,n],
-    [r,r,r,r,r,r,r,r,r],
-    [r,r,r,r,r,r,r,r,r],
-    [r,r,r,r,r,r,r,r,r],
-    [r,r,r,r,r,r,r,r,r],
-    [r,r,r,r,r,r,r,r,r],
-    [n,r,r,r,r,r,r,r,n],
-    [n,n,r,r,r,r,r,n,n]
-]
->>>>>>> cccdf8cbafb35a33fa2af19c3171a64673c07ee8

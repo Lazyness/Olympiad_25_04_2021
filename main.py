@@ -1,6 +1,7 @@
 from inputdate import getdate
 from our_math import get_predict
 from constants import videoWriter
+#main
 def main():
     date = getdate()
     time1 = date[4][0]

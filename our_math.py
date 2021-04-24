@@ -1,15 +1,8 @@
 from inputdate import getdate
 from constants import cordB1, cordB2, cordB3, cordB4, cordB5, cordB6,datelast
 from results import video_write, outputf
+
 def get_predict(time1,time2):
-
-    
-
-
-
-
-    
-
     date = getdate()
     time1 = time_Str_To_Int(time1)
     time2 = time_Str_To_Int(time2)
@@ -27,15 +20,6 @@ def get_predict(time1,time2):
         time = time_Str_To_Int(time)
         if time1 <= time and time2 >= time:
             indArr.append(timeId)
-
-
-
-
-
-
-
-
-
     for ind in indArr:
         datelast.setb(eddystone_instance_id[ind],rssi[ind])
         if -1 * rssi[ind] <= 45:
@@ -97,21 +81,9 @@ def get_predict(time1,time2):
         if -1 * rssi[ind] >= 55 :
             xy = datelast.get2max()
             video_write(xy[0],xy[1])
-    
-
-
-
-
-    
     return 
 
-
-
-
-
-
-
-
+    # old algoritm
 
     # arr = [-150,-150,-150,-150,-150,-150]
     
@@ -169,8 +141,7 @@ def get_predict(time1,time2):
     # video_write(xy[0],xy[1])
     
 
-
-
+# cotvert string to int
 def time_Str_To_Int(time):
     if type(time) == int:
         return time
@@ -178,7 +149,7 @@ def time_Str_To_Int(time):
     return int(newtime) 
 
 
-
+#find dot 
 def findxyd(x1,x2,x3,y1,y2,y3,d1,d2,d3):
     x1 = float(x1)
     x2 = float(x2)
@@ -204,7 +175,7 @@ def findxyd(x1,x2,x3,y1,y2,y3,d1,d2,d3):
         x = (f2 + y * f3)/f1
     return ([x,y])
 
-
+#convert rssi to distanse (doesn`t work)
 def val_do_dis(val):
     val = - val
     if val <= 41:
@@ -230,4 +201,3 @@ def val_do_dis(val):
     alpha = 0
     return dis * 42
 
-get_predict(23190509405,23190510217)
