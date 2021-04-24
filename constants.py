@@ -1,10 +1,10 @@
 import cv2
 
 
-filename = "data-1-2.csv"
+filename = "D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\data-1-2.csv"
+message = 'Hello world!!!!!!!!!!'
 
-
-map_name = "photo_2021-04-24_10-17-12.jpg"
+map_name = "D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\photo_2021-04-24_10-17-12.jpg"
 img = cv2.imread(map_name)
 imgWidth = 1280
 imgHeight = 400
@@ -13,7 +13,7 @@ video_speed = 2
 
 
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')
-videoWriter = cv2.VideoWriter("output.avi", fourcc, video_speed , (imgWidth, imgHeight))
+videoWriter = cv2.VideoWriter("D:\\Olimp_24_05_2021\\Olympiad_25_04_2021\\output.avi", fourcc, video_speed , (imgWidth, imgHeight))
 
 cordB1 = [1091,271]
 cordB2 = [1091,121]
