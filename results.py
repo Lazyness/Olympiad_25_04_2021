@@ -1,4 +1,4 @@
-from constants import videoWriter, img, divace_texture
+from constants import videoWriter, img, divace_texture, printfile
 
 def video_write(x,y):
     im = drow(img.copy(),getdots(x,y))
@@ -24,6 +24,17 @@ def getdots(x,y):
                 dots.append(dot)
     
     return dots
+
+def outputf(message):
+    my_file = open(printfile, 'r')
+    r = my_file.read()
+    my_file = open(printfile, 'w')
+    message = r + message
+    my_file.write(message)
+    
+    my_file.close()
+
+
 
 def video_reliase():
     videoWriter.release()
